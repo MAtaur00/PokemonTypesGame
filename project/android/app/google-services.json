@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "465389793398",
+    "project_id": "pokemontypes-a4956",
+    "storage_bucket": "pokemontypes-a4956.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465389793398:android:24d464741cf254c9c6ef57",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465389793398-vtk9ocf2cveq6fu21f59kme5qusdg867.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsiq8HDYW76zn9_f1_Fn7NrWnuQn6ODH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465389793398-vtk9ocf2cveq6fu21f59kme5qusdg867.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
