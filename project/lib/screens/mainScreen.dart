@@ -19,9 +19,9 @@ class _MainScreenState extends State<MainScreen> {
     _textController = TextEditingController();
     _textController.text = 'Player';
     //We will get the stand info only once, as we know stand info will never change
-    FirebaseFirestore.instance.collection("types").get().then((query) {
-      Provider.of<PlayerSettings>(context, listen: false).types = query.docs;
-    });
+    // FirebaseFirestore.instance.collection("types").get().then((query) {
+    //   Provider.of<PlayerSettings>(context, listen: false).types = query.docs;
+    // });
     super.initState();
   }
 
