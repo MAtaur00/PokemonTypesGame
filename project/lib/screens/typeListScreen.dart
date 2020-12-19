@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:project/screens/typeDataScreen.dart';
 
 import '../playerSettings.dart';
 import '../pokemonType.dart';
@@ -39,6 +40,13 @@ class TypeListScreen extends StatelessWidget {
                         trailing: Image.asset(
                           typeProperties["img"],
                         ),
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => TypePage(singularType[index]),
+                            ),
+                          );
+                        },
                       ),
                       Divider(thickness: 2),
                     ],

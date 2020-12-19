@@ -18,7 +18,7 @@ class _MainScreenState extends State<MainScreen> {
   void initState() {
     _textController = TextEditingController();
     _textController.text = 'Player';
-    //We will get the stand info only once, as we know stand info will never change
+
     // FirebaseFirestore.instance.collection("types").get().then((query) {
     //   Provider.of<PlayerSettings>(context, listen: false).types = query.docs;
     // });
@@ -28,7 +28,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Pokémon Type Calculator')),
+        appBar: AppBar(title: Text('Pokémon Type Battle')),
         body: Center(
           child: Column(
             children: <Widget>[
