@@ -89,6 +89,14 @@ class _Overview extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
+                  Text(
+                    "Battle properties still don't work",
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   // ListView.builder(
                   //   scrollDirection: Axis.vertical,
                   //   shrinkWrap: true,
