@@ -9,6 +9,7 @@ import 'pokemonType.dart';
 import 'screens/current_lobbies.dart';
 import 'screens/lobby_pre_game.dart';
 import 'screens/scene_game.dart';
+import 'screens/instructions.dart';
 
 //void main() => runApp(PokemonTypeApp());
 
@@ -26,6 +27,7 @@ class App extends StatelessWidget {
         '/': (context) => MainScreen(), //Main menu
         '/TLS': (context) => TypeListScreen(),
         '/CL': (context) => CurrentLobbies(),
+        '/IP': (context) => InstructionsPage(),
         '/LS': (context) => LobbyScreen(),
         '/SG': (context) => SceneGame(),
       },
