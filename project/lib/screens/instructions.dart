@@ -11,15 +11,18 @@ class InstructionsPage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Expanded(
-                flex: 3,
+                flex: 7,
                 child: Text(
                   "This is a two player game where each player has to choose "
                   "a Pokémon type and, according to its battle properties, "
-                  "the winner will be one type or another one.\nBoth types "
+                  "the winner will be one type or another one.\n\nBoth types "
                   "will be compared to each other and, if one has an edge "
                   "on the other, that type will be declared as the winner."
-                  "\nIf no type has a real advantage, the battle will"
+                  "\n\nIf no type has a real advantage, the battle will "
                   "result in a draw.",
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
                 ),
               ),
             ],
