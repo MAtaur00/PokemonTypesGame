@@ -28,25 +28,12 @@ class PokemonType {
   PokemonType.fromJson(Map<String, dynamic> json)
       : typeName = json['name'],
         icon = json['img'],
-        weaknesses = json['nosehulio'],
-        resistances = json['nosehulio2'],
+        weaknesses = List.from(json["weaknesses"]),
+        resistances = List.from(json["resistances"]),
         strongP1 = json['strongPokemon1'],
         strongP2 = json['strongPokemon2'],
         strongP3 = json['strongPokemon3'],
         strongP1img = json['strongPokemon1img'],
         strongP2img = json['strongPokemon2img'],
         strongP3img = json['strongPokemon3img'];
-
-  Map<String, dynamic> toJson() => {
-        'name': typeName,
-        'img': icon,
-        'nosehulio': weaknesses,
-        'nosehulio2': resistances,
-        'strongPokemon1': strongP1,
-        'strongPokemon2': strongP2,
-        'strongPokemon3': strongP3,
-        'strongPokemon1img': strongP1img,
-        'strongPokemon2img': strongP2img,
-        'strongPokemon3img': strongP3img,
-      };
 }
