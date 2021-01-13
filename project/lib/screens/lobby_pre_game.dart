@@ -88,7 +88,8 @@ class _LobbyScreenState extends State<LobbyScreen> {
                                   });
                                 }
                               },
-                            ))
+                            ),
+                          )
                         : Text("Waiting player 1 to Start"),
                     RaisedButton(
                       child: Text("Exit"),

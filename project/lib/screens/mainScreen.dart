@@ -19,9 +19,9 @@ class _MainScreenState extends State<MainScreen> {
     _textController = TextEditingController();
     _textController.text = 'Player';
 
-    // FirebaseFirestore.instance.collection("types").get().then((query) {
-    //   Provider.of<PlayerSettings>(context, listen: false).types = query.docs;
-    // });
+    FirebaseFirestore.instance.collection("types").get().then((query) {
+      Provider.of<PlayerSettings>(context, listen: false).types = query.docs;
+    });
     super.initState();
   }
 

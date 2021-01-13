@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'screens/typeListScreen.dart';
 import 'screens/mainScreen.dart';
 import 'playerSettings.dart';
-import 'pokemonType.dart';
 import 'screens/current_lobbies.dart';
 import 'screens/lobby_pre_game.dart';
 import 'screens/scene_game.dart';
@@ -36,7 +35,7 @@ class PokemonTypeApp extends StatelessWidget {
               canvasColor: Colors.lightGreenAccent[100],
             ),
             routes: {
-              '/': (context) => MainScreen(), //Main menu
+              '/': (context) => MainScreen(),
               '/TLS': (context) => TypeListScreen(),
               '/CL': (context) => CurrentLobbies(),
               '/IP': (context) => InstructionsPage(),

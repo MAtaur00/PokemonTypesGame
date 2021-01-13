@@ -41,10 +41,10 @@ class _CurrentLobbiesState extends State<CurrentLobbies> {
         await FirebaseFirestore.instance.collection("lobbies").add({
       'Name': _newGameName.text,
       'P1': PlayerSettingsLocalization.of(context).name,
-      'P1Stand': -1,
+      'P1Type': -1,
       'P1Rematch': false,
       'P2': 'Empty',
-      'P2Stand': -1,
+      'P2Type': -1,
       'P2Rematch': false,
       'Full': false,
       'Running': false,
