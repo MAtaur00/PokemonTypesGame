@@ -73,7 +73,7 @@ class _CurrentLobbiesState extends State<CurrentLobbies> {
         itemBuilder: (context, i) {
           return InkWell(
             child: ListTile(
-                title: Text('Game $i: ${documents[i].data()["Name"]}')),
+                title: Text('Game ${i + 1}: ${documents[i].data()["Name"]}')),
             onTap: () {
               if (!documents[i].data()['Full']) {
                 DocumentReference lobby = FirebaseFirestore.instance
