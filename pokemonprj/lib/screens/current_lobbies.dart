@@ -35,7 +35,6 @@ class _CurrentLobbiesState extends State<CurrentLobbies> {
     super.initState();
   }
 
-  //We will use this function to call firebase to create a new document (game) inside the collection "lobbies"
   Future<DocumentReference> createLobby() async {
     DocumentReference lobby =
         await FirebaseFirestore.instance.collection("lobbies").add({
@@ -59,6 +58,7 @@ class _CurrentLobbiesState extends State<CurrentLobbies> {
         title: Text('Select or create a game | Total Games $totalGames'),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.lightGreen[600],
         child: Icon(Icons.add_circle_outline),
         tooltip: "Create game",
         onPressed: () {

@@ -109,12 +109,21 @@ class _SceneGameState extends State<SceneGame> {
                                 ? 'P1Rematch'
                                 : 'P2Rematch': true,
                           });
-                          if (snapshot.data["P1Rematch"] ||
-                              snapshot.data["P2Rematch"]) {
-                            lobbyRef.update({
-                              'P1Type': -1,
-                              'P2Type': -1,
-                            });
+                          if (snapshot.data["P1Rematch"]) {
+                            lobbyRef.update(
+                              {
+                                'P1Type': -1,
+                                'P1Rematch': false,
+                              },
+                            );
+                          }
+                          if (snapshot.data["P2Rematch"]) {
+                            lobbyRef.update(
+                              {
+                                'P2Type': -1,
+                                'P2Rematch': false,
+                              },
+                            );
                           }
                         },
                       ),
@@ -179,9 +188,15 @@ class _SceneGameState extends State<SceneGame> {
 
 //draw
 
-    if (typeP1.data()['name'] == typeP2.data()['name'] ||
-        p2resistsp1 && p1resistsp2 ||
-        p1weakTop2 && p2weakTop1) {
+    if (typeP1.data()['name'] == typeP2.data()['name']) {
+      winner = "draw";
+    }
+
+    if (p2resistsp1 && p1resistsp2 || p1weakTop2 && p2weakTop1) {
+      winner = "draw";
+    }
+
+    if (!p2resistsp1 && !p1resistsp2 && !p1weakTop2 && !p2weakTop1) {
       winner = "draw";
     }
   }
@@ -232,6 +247,10 @@ class _PlayersPhotos extends StatelessWidget {
             typeP1.data()['img'],
             fit: BoxFit.fitHeight,
           ),
+        ),
+        Image.asset(
+          "vsImage.png",
+          width: 80,
         ),
         Expanded(
           child: Image.asset(

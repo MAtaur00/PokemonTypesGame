@@ -32,6 +32,9 @@ class PokemonTypeApp extends StatelessWidget {
                   pSettings.name, pSettings.lobbyID, pSettings.types),
             ],
             theme: ThemeData(
+              appBarTheme: AppBarTheme(
+                color: Colors.lightGreen[600],
+              ),
               canvasColor: Colors.lightGreenAccent[100],
             ),
             routes: {

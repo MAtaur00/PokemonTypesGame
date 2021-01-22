@@ -249,8 +249,7 @@ class _TypeExamples extends StatelessWidget {
                       children: <Widget>[
                         Image.asset(
                           pkmType.strongP1img,
-                          height: 150,
-                          width: 150,
+                          fit: BoxFit.fitHeight,
                         ),
                         Text(
                           pkmType.strongP1,
@@ -269,8 +268,7 @@ class _TypeExamples extends StatelessWidget {
                       children: <Widget>[
                         Image.asset(
                           pkmType.strongP2img,
-                          height: 150,
-                          width: 150,
+                          fit: BoxFit.fitHeight,
                         ),
                         Text(
                           pkmType.strongP2,
@@ -289,8 +287,7 @@ class _TypeExamples extends StatelessWidget {
                       children: <Widget>[
                         Image.asset(
                           pkmType.strongP3img,
-                          height: 150,
-                          width: 150,
+                          fit: BoxFit.fitHeight,
                         ),
                         Text(
                           pkmType.strongP3,
