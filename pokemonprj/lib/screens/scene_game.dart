@@ -62,9 +62,10 @@ class _SceneGameState extends State<SceneGame> {
               return Center(child: CircularProgressIndicator());
             }
             typeP1 = PlayerSettingsLocalization.of(context).types[
-                (snapshot.data["P1type"] != -1) ? snapshot.data["P1type"] : 0];
+                (snapshot.data["P1Type"] != -1) ? snapshot.data["P1Type"] : 0];
             typeP2 = PlayerSettingsLocalization.of(context).types[
-                (snapshot.data["P2type"] != -1) ? snapshot.data["P2type"] : 0];
+                (snapshot.data["P2Type"] != -1) ? snapshot.data["P2Type"] : 0];
+
             calculateGameOutcome();
             return Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -111,8 +112,8 @@ class _SceneGameState extends State<SceneGame> {
                           if (snapshot.data["P1Rematch"] ||
                               snapshot.data["P2Rematch"]) {
                             lobbyRef.update({
-                              'P1type': -1,
-                              'P2type': -1,
+                              'P1Type': -1,
+                              'P2Type': -1,
                             });
                           }
                         },
@@ -203,7 +204,7 @@ class _GameResults extends StatelessWidget {
             (winner != 'draw') ? "$winner type WINS" : "IT'S A DRAW",
             style: TextStyle(
                 fontSize: 25,
-                color: Colors.yellow,
+                color: Colors.grey[700],
                 fontWeight: FontWeight.bold),
           ),
         ),

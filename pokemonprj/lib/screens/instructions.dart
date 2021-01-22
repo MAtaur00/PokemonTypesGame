@@ -19,7 +19,9 @@ class InstructionsPage extends StatelessWidget {
                   "will be compared to each other and, if one has an edge "
                   "on the other, that type will be declared as the winner."
                   "\n\nIf no type has a real advantage, the battle will "
-                  "result in a draw.",
+                  "result in a draw.\n\n Checking a type's information will"
+                  "give you data about its weaknesses, its resistances, and"
+                  "3 examples of strong Pokémon with that typing.",
                   style: TextStyle(
                     fontSize: 20,
                   ),

@@ -5,69 +5,9 @@ import 'package:pokemonprj/screens/typeDataScreen.dart';
 import '../playerSettings.dart';
 import '../pokemonType.dart';
 
-// class TypeListScreen extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     CollectionReference pokemonTypes =
-//         FirebaseFirestore.instance.collection('types');
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text('Typepedia'),
-//       ),
-//       body: FutureBuilder<QuerySnapshot>(
-//         future: pokemonTypes.get(),
-//         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-//           if (snapshot.hasError) {
-//             return Text("Something went wrong");
-//           }
-
-//           if (snapshot.connectionState == ConnectionState.done) {
-//             List<QueryDocumentSnapshot> singularType = snapshot.data.docs;
-//             return ListView.builder(
-//               itemCount: singularType.length,
-//               itemBuilder: (context, index) {
-//                 Map<String, dynamic> typeProperties =
-//                     singularType[index].data();
-//                 return Padding(
-//                   padding: const EdgeInsets.all(6.0),
-//                   child: Column(
-//                     children: <Widget>[
-//                       ListTile(
-//                         title: Text(typeProperties["name"] + " type",
-//                             style: TextStyle(
-//                                 color: Colors.black,
-//                                 fontWeight: FontWeight.bold)),
-//                         trailing: Image.asset(
-//                           typeProperties["img"],
-//                         ),
-//                         onTap: () {
-//                           Navigator.of(context).push(
-//                             MaterialPageRoute(
-//                               builder: (_) => TypePage(singularType[index]),
-//                             ),
-//                           );
-//                         },
-//                       ),
-//                       Divider(thickness: 2),
-//                     ],
-//                   ),
-//                 );
-//               },
-//             );
-//           }
-//           return Text("loading");
-//         },
-//       ),
-//     );
-//   }
-// }
-
 class TypeListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // CollectionReference pokemonTypes =
-    //     FirebaseFirestore.instance.collection('types');
-
     final bool gameSelection = ModalRoute.of(context).settings.arguments;
     final List<DocumentSnapshot> pokemonTypes =
         PlayerSettingsLocalization.of(context).types;
@@ -152,7 +92,7 @@ Future preGameDialogOptions(
           FlatButton(
             child: Text(
               "Info",
-              style: TextStyle(color: Colors.yellow[400]),
+              style: TextStyle(color: Colors.indigo[300]),
             ),
             onPressed: () {
               Navigator.of(context).push(
